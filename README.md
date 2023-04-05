@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v3
         name: Checkout code
 
-      - uses: pallabpain/action-conventional-commits@v1.1.1
+      - uses: rapyuta-robotics/action-conventional-commits@v1.1.1
         name: Check commit hygiene
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
