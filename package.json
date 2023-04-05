@@ -2,8 +2,8 @@
   "name": "action-conventional-commits",
   "version": "1.1.1",
   "main": "index.js",
-  "repository": "git@github.com:pallabpain/action-conventional-commits.git",
-  "author": "Pallab Pain",
+  "repository": "git@github.com:rapyuta-robotics/action-conventional-commits.git",
+  "author": "Rapyuta Robotics",
   "license": "Apache-2.0",
   "dependencies": {
     "@actions/core": "^1.2.3",
