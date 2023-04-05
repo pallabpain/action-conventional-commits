@@ -7,23 +7,27 @@ A simple GitHub action that makes sure all commit messages are following the [Co
 Note that, typically, you would make this check on a pre-commit hook (for example, using something like [Commitlint](https://commitlint.js.org/)), but those can easily be skipped, hence this GitHub action.
 
 ### Usage
-Latest version: `v1.1.0`
+Latest version: `v1.1.1`
 
 ```yml
 name: Conventional Commits
 
 on:
   pull_request:
-    branches: [ master ]
+    branches:
+    - main
+    - dev
 
 jobs:
-  build:
+  check:
     name: Conventional Commits
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        name: Checkout code
 
-      - uses: webiny/action-conventional-commits@v1.1.0
+      - uses: pallabpain/action-conventional-commits@v1.1.1
+        name: Check commit hygiene
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
