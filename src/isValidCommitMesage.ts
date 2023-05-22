@@ -12,6 +12,7 @@ const DEFAULT_COMMIT_TYPES = [
     "revert",
     "merge",
     "wip",
+    "release",
 ];
 
 const isValidCommitMessage = (message, availableTypes = DEFAULT_COMMIT_TYPES): boolean => {
