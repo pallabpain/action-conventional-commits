@@ -37694,7 +37694,7 @@ const DEFAULT_COMMIT_TYPES = [
     "release",
 ];
 function parseEmojiTextIfPresent(message) {
-    const emojiRegex = /^:\w+: (\w+\(([^)]+)\):\s*.*)$/;
+    const emojiRegex = /^:\w+: (.*)$/m;
     const match = message.match(emojiRegex);
     if (match && match.length >= 2) {
         return match[1].trim();
